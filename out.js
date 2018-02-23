@@ -30,7 +30,7 @@ function selectUnread(listName, db, callback){
 }
 
 var outputTweets = function (listName, rows) {
-  var out = "# " + dbName + "\n";
+  var out = "# " + listName + "\n";
   var lastScreenName = "";
   
   for(var i = 0; i < rows.length; i++){
