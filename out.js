@@ -58,6 +58,11 @@ var outputTweets = function (listName, rows) {
 }
 
 
+function markAsRead(db){
+  var sql = 'UPDATE tweet SET read_flg = 1;';
+  sqlite.exeSQL(db, sql, []);
+}
+
 for(var i = 0; i < lists['list'].length; i++){
   var list = lists['list'][i];
   var dbName = list['name'];
@@ -66,5 +71,6 @@ for(var i = 0; i < lists['list'].length; i++){
     dbName,
     db,
     outputTweets);
+  markAsRead(db);
 }
 
