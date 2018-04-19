@@ -47,7 +47,7 @@ var outputTweets = function (listName, rows) {
     }
     
     var tweetURL = "https://twitter.com/" + cur['screen_name'] + "/status/" + cur['id_str'];
-    out += "[link](" + tweetURL + ")" + " → ";
+    out += "[link](" + tweetURL + ")" + " : ";
     out += cur['text'].replace( /#/g , "♯" ) + "\n";
     out += "<hr/>\n";
     
